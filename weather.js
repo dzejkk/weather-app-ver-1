@@ -17,7 +17,7 @@ export function getWeather(lat, lon, timezone) {
       //console.log(data);
 
       return {
-        currentWeather: parseCurrentWeather(data), //vratenie  parsovanych premennych
+        currentWeather: parseCurrentWeather(data), //vratenie  parsovanych premennych pomocou  funkcii
         dailyWeaher: parseDailyWeather(data),
         hourlyWeather: parseHourlyWeather(data),
       };
