@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API_URL =
-  "https://api.open-meteo.com/v1/forecast?daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,rain_sum,wind_speed_10m_max&hourly=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,is_day&current=temperature_2m,relative_humidity_2m,is_day,wind_speed_10m,rain,weather_code";
+  "https://api.open-meteo.com/v1/forecast?daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,rain_sum,wind_speed_10m_max&hourly=temperature_2m,precipitation_probability,relative_humidity_2m,weather_code,wind_speed_10m,is_day&current=temperature_2m,relative_humidity_2m,is_day,wind_speed_10m,rain,weather_code";
 
 export function getWeather(lat, lon, timezone) {
   return axios
@@ -14,7 +14,7 @@ export function getWeather(lat, lon, timezone) {
     })
     .then(({ data }) => {
       // shorhand for   then.response,  const data = response
-      // console.log(data);
+      console.log(data);
 
       return {
         currentWeather: parseCurrentWeather(data), //vratenie  parsovanych premennych pomocou  funkcii
@@ -30,7 +30,7 @@ function parseCurrentWeather({ current, daily }) {
     temperature_2m: currentTemp,
     relative_humidity_2m: humidity,
     rain: rain,
-    weathercode: iconCode,
+    weather_code: iconCode,
   } = current;
 
   const {
@@ -76,6 +76,7 @@ function parseHourlyWeather({ hourly, current }) {
         temp: hourly.temperature_2m[index],
         humidity: hourly.relative_humidity_2m[index],
         windSpeed: hourly.wind_speed_10m[index],
+        precip: hourly.precipitation_probability[index],
       };
     })
     .filter(({ date }) => new Date(date) >= new Date(current.time));
