@@ -96,19 +96,24 @@ body {
 }
 
 .hours-section {
-    width: 100%;
-    text-align: center;
-    border-spacing: 0;
+  width: 100%;
+  text-align: center;
+  border-spacing: 0;
 }
 
 .hour-row {
-    background-color: hsl(200, 60%, 75%);
+  background-color: hsl(200, 60%, 75%);
 }
 
 .hour-row:nth-child(odd) {
-    background-color: hsl(200, 60%, 70%);
+  background-color: hsl(200, 60%, 70%);
 }
 
 .hour-row > td {
-    padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.container {
+  margin: auto;
+  max-width: clamp(440px, 70%, 1440px);
 }

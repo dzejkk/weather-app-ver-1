@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <body class="blurred">
+  <body class="blurred container">
     <header class="header">
       <div class="header-left">
         <img
@@ -54,37 +54,37 @@
 
     <section class="day-section" data-day-section>
       <div class="day-card">
-        <img src="public/Icons/cloud.svg" alt="" class="weather-icon" />
+        <img src="/Icons/cloud.svg" alt="" class="weather-icon" />
         <div class="day-card-day">Monday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="public/Icons/cloud.svg" alt="" class="weather-icon" />
+        <img src="/Icons/cloud.svg" alt="" class="weather-icon" />
         <div class="day-card-day">Tuesday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="public/Icons/cloud.svg" alt="" class="weather-icon" />
+        <img src="/Icons/cloud.svg" alt="" class="weather-icon" />
         <div class="day-card-day">Wednesday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="public/Icons/cloud.svg" alt="" class="weather-icon" />
+        <img src="/Icons/cloud.svg" alt="" class="weather-icon" />
         <div class="day-card-day">Thursday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="public/Icons/cloud.svg" alt="" class="weather-icon" />
+        <img src="/Icons/cloud.svg" alt="" class="weather-icon" />
         <div class="day-card-day">Friday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="public/Icons/cloud.svg" alt="" class="weather-icon" />
+        <img src="/Icons/cloud.svg" alt="" class="weather-icon" />
         <div class="day-card-day">Saturday</div>
         <div>32&deg;</div>
       </div>
       <div class="day-card">
-        <img src="public/Icons/cloud.svg" alt="" class="weather-icon" />
+        <img src="/Icons/cloud.svg" alt="" class="weather-icon" />
         <div class="day-card-day">Sunday</div>
         <div>32&deg;</div>
       </div>
@@ -100,7 +100,7 @@
             </div>
           </td>
           <td>
-            <img src="Icons/cloud.svg" class="weather-icon" />
+            <img alt="alt_text" src="Icons/cloud.svg" class="weather-icon" />
           </td>
           <td>
             <div class="info-group">
@@ -134,9 +134,7 @@
               <div>4 PM</div>
             </div>
           </td>
-          <td>
-            <img src="Icons/cloud.svg" class="weather-icon" />
-          </td>
+          <td><img alt="alt" src="Icons/cloud.svg" class="weather-icon" /></td>
           <td>
             <div class="info-group">
               <div class="label">Temp</div>
@@ -169,9 +167,7 @@
               <div>5 PM</div>
             </div>
           </td>
-          <td>
-            <img src="Icons/cloud.svg" class="weather-icon" />
-          </td>
+          <td><img alt="" src="Icons/cloud.svg" class="weather-icon" /></td>
           <td>
             <div class="info-group">
               <div class="label">Temp</div>
@@ -204,9 +200,7 @@
               <div>6 PM</div>
             </div>
           </td>
-          <td>
-            <img src="Icons/cloud.svg" class="weather-icon" />
-          </td>
+          <td><img alt="" src="Icons/cloud.svg" class="weather-icon" /></td>
           <td>
             <div class="info-group">
               <div class="label">Temp</div>
@@ -239,9 +233,7 @@
               <div>7 PM</div>
             </div>
           </td>
-          <td>
-            <img src="Icons/cloud.svg" class="weather-icon" />
-          </td>
+          <td><img alt="" src="Icons/cloud.svg" class="weather-icon" /></td>
           <td>
             <div class="info-group">
               <div class="label">Temp</div>
@@ -275,7 +267,11 @@
             </div>
           </td>
           <td>
-            <img src="Icons/cloud.svg" class="weather-icon" />
+            <img
+              alt="weather-icon"
+              src="Icons/cloud.svg"
+              class="weather-icon"
+            />
           </td>
           <td>
             <div class="info-group">
@@ -310,7 +306,11 @@
             </div>
           </td>
           <td>
-            <img src="Icons/cloud.svg" class="weather-icon" />
+            <img
+              alt="weather-icon"
+              src="Icons/cloud.svg"
+              class="weather-icon"
+            />
           </td>
           <td>
             <div class="info-group">
@@ -345,7 +345,11 @@
             </div>
           </td>
           <td>
-            <img src="Icons/cloud.svg" class="weather-icon" />
+            <img
+              alt="weather-icon"
+              src="Icons/cloud.svg"
+              class="weather-icon"
+            />
           </td>
           <td>
             <div class="info-group">
@@ -380,7 +384,11 @@
             </div>
           </td>
           <td>
-            <img src="Icons/cloud.svg" class="weather-icon" />
+            <img
+              alt="weather-icon"
+              src="Icons/cloud.svg"
+              class="weather-icon"
+            />
           </td>
           <td>
             <div class="info-group">
@@ -415,7 +423,11 @@
             </div>
           </td>
           <td>
-            <img src="Icons/cloud.svg" class="weather-icon" />
+            <img
+              alt="weather-icon"
+              src="Icons/cloud.svg"
+              class="weather-icon"
+            />
           </td>
           <td>
             <div class="info-group">
@@ -447,7 +459,7 @@
 
     <template id="day-card-template">
       <div class="day-card">
-        <img data-icon alt="" class="weather-icon" />
+        <img alt="weather-icon" data-icon alt="" class="weather-icon" />
         <div class="day-card-day" data-date></div>
         <div><span data-temp></span><span> &deg;</span></div>
       </div>
@@ -462,7 +474,7 @@
           </div>
         </td>
         <td>
-          <img data-icon class="weather-icon" />
+          <img alt="weather-icon" data-icon class="weather-icon" />
         </td>
         <td>
           <div class="info-group">

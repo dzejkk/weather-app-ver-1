@@ -2,12 +2,26 @@ import { ICON_MAP } from "./iconmap.js";
 import "./style.css";
 import { getWeather } from "./weather.js";
 
-getWeather(49.2, 18.7, Intl.DateTimeFormat().resolvedOptions().timeZone)
-  .then(renderWeather)
-  .catch((e) => {
-    console.error(e);
-    alert("Error getting data");
-  });
+navigator.geolocation.getCurrentPosition(positionSuccess, positionError); // to get geo location
+
+function positionSuccess({ coords }) {
+  getWeather(
+    coords.latitude,
+    coords.longitude,
+    Intl.DateTimeFormat().resolvedOptions().timeZone
+  )
+    .then(renderWeather)
+    .catch((e) => {
+      console.error(e);
+      alert("Error getting weather.");
+    });
+}
+
+function positionError() {
+  alert(
+    "There was an error getting your location. Please allow us to use your location and refresh the page."
+  );
+}
 
 function renderWeather({ currentWeather, dailyWeather, hourlyWeather }) {
   renderCurrentWeather(currentWeather);

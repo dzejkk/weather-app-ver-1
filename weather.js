@@ -14,7 +14,7 @@ export function getWeather(lat, lon, timezone) {
     })
     .then(({ data }) => {
       // shorhand for   then.response,  const data = response
-      console.log(data);
+      //console.log(data);
 
       return {
         currentWeather: parseCurrentWeather(data), //vratenie  parsovanych premennych pomocou  funkcii
