@@ -14,11 +14,11 @@ export function getWeather(lat, lon, timezone) {
     })
     .then(({ data }) => {
       // shorhand for   then.response,  const data = response
-      //console.log(data);
+      // console.log(data);
 
       return {
         currentWeather: parseCurrentWeather(data), //vratenie  parsovanych premennych pomocou  funkcii
-        dailyWeaher: parseDailyWeather(data),
+        dailyWeather: parseDailyWeather(data),
         hourlyWeather: parseHourlyWeather(data),
       };
     });
@@ -30,6 +30,7 @@ function parseCurrentWeather({ current, daily }) {
     temperature_2m: currentTemp,
     relative_humidity_2m: humidity,
     rain: rain,
+    weathercode: iconCode,
   } = current;
 
   const {
@@ -49,6 +50,7 @@ function parseCurrentWeather({ current, daily }) {
     sunrise,
     sunset,
     windMax,
+    iconCode,
   };
 }
 
